@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Wikipages.Models.Business>
+
+<html>
+<head>
+    <title>Wikipages</title>
+</head>
+<body>
+    <h2>Businesses by category</h2>
+    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li><a href="businesses/details/@listItem.BusinessId">@Html.DisplayFor(_ => listItem.Name)</a></li>
+        }
+    </ul>
+</body>
+</html>
